@@ -1,7 +1,8 @@
-import { GameContainer } from '@/components/game-container';
+
 import { NasaResourceCard } from '@/components/nasa-resource-card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Rocket } from 'lucide-react';
+import { Card } from '@/components/ui/card';
 
 const nasaResources = [
   {
@@ -36,19 +37,26 @@ export default function Home() {
             </h1>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Embark on a cosmic journey! Play our mini-game and discover amazing resources from NASA.
+            Embark on a cosmic journey! Discover amazing resources from NASA.
           </p>
         </header>
 
         <section id="game" className="mb-16 animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-200">
-          <GameContainer />
-        </section>
-
-        <section id="game-description" className="text-center mb-16 animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-300">
-          <h2 className="text-3xl font-bold font-headline mb-4 text-foreground">Asteroid Field Navigator</h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Test your reflexes in the Asteroid Field Navigator! Your mission is to click on as many passing asteroids as you can before time runs out. Each asteroid clicked scores a point. How high can you score?
-          </p>
+          <Card className="w-full max-w-4xl mx-auto shadow-2xl">
+            <div
+              className="relative w-full aspect-[2/1] bg-black overflow-hidden rounded-lg select-none flex items-center justify-center"
+              style={{
+                backgroundImage:
+                  'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)',
+                backgroundSize: '2rem 2rem',
+              }}
+            >
+              <div className="text-center text-white p-8 bg-black/50 rounded-lg">
+                <h3 className="text-2xl font-bold mb-2">Game Coming Soon!</h3>
+                <p className="text-muted-foreground">The Asteroid Field Navigator will be docked here shortly.</p>
+              </div>
+            </div>
+          </Card>
         </section>
 
         <section id="resources" className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-400">
