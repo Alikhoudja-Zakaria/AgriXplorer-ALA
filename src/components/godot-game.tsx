@@ -12,12 +12,12 @@ export function GodotGame() {
             </CardDescription>
         </CardHeader>
         <CardContent className="p-0">
-            <div className="aspect-video w-full">
+            <div className="w-full flex justify-center">
                 <iframe
                     frameBorder="0"
-                    src="https://itch.io/embed-upload/10853109?bg_color=12251c"
-                    className="w-full h-full"
-                    allowFullScreen
+                    src="https://itch.io/embed/3936170"
+                    width="552"
+                    height="167"
                 >
                 </iframe>
             </div>
