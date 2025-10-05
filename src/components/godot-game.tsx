@@ -11,11 +11,11 @@ export function GodotGame() {
                 Dive in and help farmers around the world make the best decisions for their land!
             </CardDescription>
         </CardHeader>
-        <CardContent>
-            <div className="aspect-video w-full rounded-lg overflow-hidden">
+        <CardContent className="p-0">
+            <div className="aspect-video w-full">
                 <iframe
                     frameBorder="0"
-                    src="https://itch.io/embed/3936170?bg_color=120_25%_8%&amp;fg_color=e0e0e0&amp;link_color=83c363"
+                    src="https://itch.io/embed-upload/10853109?bg_color=12251c"
                     className="w-full h-full"
                     allowFullScreen
                 >
