@@ -1,7 +1,7 @@
 
 import { NasaResourceCard } from '@/components/nasa-resource-card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Leaf, MapPin, BarChart3, BookOpen, BrainCircuit, Droplets, Soil, Trees } from 'lucide-react';
+import { Leaf, MapPin, BarChart3, BookOpen, BrainCircuit } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 
 const nasaResources = [
@@ -34,19 +34,19 @@ const missionSteps = [
     {
         icon: BarChart3,
         title: "Study the Environment",
-        description: "Examine real satellite data showing rainfall, vegetation, soil moisture, and plant stress.",
+        description: "Examine real satellite images and data showing: Rainfall patterns, Vegetation density, Soil moisture, and Plant stress indicators.",
     },
     {
         icon: BookOpen,
         title: "Choose the Right Crop",
-        description: "Match what you observe from the maps with the plant’s requirements in the Plant Catalog.",
+        description: "Open the Plant Catalog to see which plants grow best under different conditions. Match what you observe from the maps with the plant’s requirements.",
     },
 ];
 
 const learningPoints = [
-    "Understand climate and geography",
-    "Learn how plants depend on soil, rainfall, and vegetation",
-    "Analyze satellite data and graphs like a real environmental scientist",
+    "How to understand 'climate and geography",
+    "How plants depend on soil, rainfall, and vegetation",
+    "How to analyze satellite data and graphs like a real environmental scientist",
 ];
 
 
@@ -71,7 +71,9 @@ export default function Home() {
                 <CardHeader className="text-center">
                     <CardTitle className="text-3xl font-bold font-headline text-primary">Become a Crop Advisor!</CardTitle>
                     <CardDescription className="text-lg max-w-3xl mx-auto">
-                        You’re the expert helping farmers choose the best crops. Analyze satellite maps and data to unlock the secrets of their land and make the perfect recommendation.
+                        In this game, you’re the expert helping farmers choose the best crops for their land. Each farmer lives in a different country and province, and they need your help to decide what to plant.
+                        <br/><br/>
+                        But here’s the challenge: the farmers don’t know the exact soil, rainfall, or vegetation conditions. You’ll have to analyze satellite maps and graphs to figure that out yourself!
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-12">
@@ -80,7 +82,7 @@ export default function Home() {
                             <span className="text-accent">🧭</span> Your Mission
                         </h3>
                         <div className="grid md:grid-cols-3 gap-6 text-center">
-                            {missionSteps.map((step, index) => (
+                            {missionSteps.map((step) => (
                                 <Card key={step.title} className="bg-background/70 transform hover:scale-105 transition-transform duration-300">
                                     <CardHeader>
                                         <div className="mx-auto bg-primary/10 text-primary p-3 rounded-full w-fit">
