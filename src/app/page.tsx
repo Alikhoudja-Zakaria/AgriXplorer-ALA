@@ -3,6 +3,7 @@ import { NasaResourceCard } from '@/components/nasa-resource-card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Leaf, MapPin, BarChart3, BookOpen, BrainCircuit } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
+import { GodotGame } from '@/components/godot-game';
 
 const nasaResources = [
   {
@@ -67,12 +68,7 @@ export default function Home() {
         </header>
 
         <section id="game-placeholder" className="mb-12">
-          <Card className="w-full h-80 flex items-center justify-center bg-card/50 backdrop-blur-sm animate-in fade-in-0 duration-500">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-primary">Game Coming Soon</h2>
-              <p className="text-lg text-muted-foreground mt-2">Get ready for an exciting agricultural adventure!</p>
-            </div>
-          </Card>
+          <GodotGame />
         </section>
 
         <section id="game" className="mb-16">
