@@ -19,7 +19,6 @@ export function GodotGame() {
                     className="w-full h-full"
                     allowFullScreen
                 >
-                    <a href="https://the-true-unknown-coder.itch.io/agrixplorers">AGRIXPLORERS by The True Unknown Coder</a>
                 </iframe>
             </div>
         </CardContent>
