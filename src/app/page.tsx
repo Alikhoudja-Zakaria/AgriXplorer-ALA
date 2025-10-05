@@ -1,13 +1,14 @@
 
 import { NasaResourceCard } from '@/components/nasa-resource-card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Leaf } from 'lucide-react';
-import { Card } from '@/components/ui/card';
+import { Leaf, MapPin, BarChart3, BookOpen, BrainCircuit, Droplets, Soil, Trees } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 
 const nasaResources = [
   {
     title: "NASA Official Website",
     description: "Explore the latest news, images, and videos from America's space agency. Get the latest updates on missions, watch NASA TV live, and learn about our quest to reveal the unknown.",
+    link: "https://www.nasa.gov/",
     image: PlaceHolderImages.find(p => p.id === 'nasa-resource-1')!,
   },
   {
@@ -23,6 +24,31 @@ const nasaResources = [
     image: PlaceHolderImages.find(p => p.id === 'nasa-resource-3')!,
   },
 ];
+
+const missionSteps = [
+    {
+        icon: MapPin,
+        title: "Meet the Farmer",
+        description: "Learn where the farmer lives and see a satellite image of their land.",
+    },
+    {
+        icon: BarChart3,
+        title: "Study the Environment",
+        description: "Examine real satellite data showing rainfall, vegetation, soil moisture, and plant stress.",
+    },
+    {
+        icon: BookOpen,
+        title: "Choose the Right Crop",
+        description: "Match what you observe from the maps with the plant’s requirements in the Plant Catalog.",
+    },
+];
+
+const learningPoints = [
+    "Understand climate and geography",
+    "Learn how plants depend on soil, rainfall, and vegetation",
+    "Analyze satellite data and graphs like a real environmental scientist",
+];
+
 
 export default function Home() {
   return (
@@ -40,25 +66,56 @@ export default function Home() {
           </p>
         </header>
 
-        <section id="game" className="mb-16 animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-200">
-          <Card className="w-full max-w-4xl mx-auto shadow-2xl">
-            <div
-              className="relative w-full aspect-[2/1] bg-black overflow-hidden rounded-lg select-none flex items-center justify-center"
-              style={{
-                backgroundImage:
-                  'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)',
-                backgroundSize: '2rem 2rem',
-              }}
-            >
-              <div className="text-center text-white p-8 bg-black/50 rounded-lg">
-                <h3 className="text-2xl font-bold mb-2">Game Coming Soon!</h3>
-                <p className="text-muted-foreground">The Crop Advisor game will be planted here shortly.</p>
-              </div>
-            </div>
-          </Card>
+        <section id="game" className="mb-16">
+            <Card className="w-full max-w-4xl mx-auto shadow-lg bg-card/50 backdrop-blur-sm animate-in fade-in-0 duration-700">
+                <CardHeader className="text-center">
+                    <CardTitle className="text-3xl font-bold font-headline text-primary">Become a Crop Advisor!</CardTitle>
+                    <CardDescription className="text-lg max-w-3xl mx-auto">
+                        You’re the expert helping farmers choose the best crops. Analyze satellite maps and data to unlock the secrets of their land and make the perfect recommendation.
+                    </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-12">
+                    <div className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-200">
+                        <h3 className="text-2xl font-bold text-center mb-6 font-headline flex items-center justify-center gap-3">
+                            <span className="text-accent">🧭</span> Your Mission
+                        </h3>
+                        <div className="grid md:grid-cols-3 gap-6 text-center">
+                            {missionSteps.map((step, index) => (
+                                <Card key={step.title} className="bg-background/70 transform hover:scale-105 transition-transform duration-300">
+                                    <CardHeader>
+                                        <div className="mx-auto bg-primary/10 text-primary p-3 rounded-full w-fit">
+                                            <step.icon className="w-8 h-8" />
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <h4 className="font-bold text-lg mb-2">{step.title}</h4>
+                                        <p className="text-muted-foreground text-sm">{step.description}</p>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    <div className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-400">
+                        <h3 className="text-2xl font-bold text-center mb-6 font-headline flex items-center justify-center gap-3">
+                           <span className="text-accent">🌱</span> What You’ll Learn
+                        </h3>
+                        <Card className="bg-background/70 p-6">
+                            <ul className="space-y-4">
+                                {learningPoints.map((point) => (
+                                    <li key={point} className="flex items-start gap-3">
+                                        <BrainCircuit className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                                        <span className="text-muted-foreground">{point}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Card>
+                    </div>
+                </CardContent>
+            </Card>
         </section>
 
-        <section id="resources" className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-400">
+        <section id="resources" className="animate-in fade-in-0 slide-in-from-bottom-10 duration-700 delay-600">
           <h2 className="text-3xl font-bold font-headline text-center mb-8 text-foreground">Explore NASA's Universe</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {nasaResources.map((resource) => (
