@@ -133,7 +133,7 @@ export default function Home() {
       </main>
 
       <footer className="py-6 text-center text-muted-foreground text-sm">
-        <p className="opacity-75">Powered by NASA data and agricultural innovation.</p>
+        <p>Powered by NASA data and agricultural innovation.</p>
       </footer>
     </div>
   );
