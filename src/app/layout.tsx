@@ -3,8 +3,8 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Space Explorers Hub',
-  description: 'An interactive hub for space enthusiasts featuring a game and NASA resources.',
+  title: 'AgriXplorer',
+  description: 'An interactive hub for agricultural exploration using NASA data.',
 };
 
 export default function RootLayout({

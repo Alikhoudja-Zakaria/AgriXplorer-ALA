@@ -1,14 +1,13 @@
 
 import { NasaResourceCard } from '@/components/nasa-resource-card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Rocket } from 'lucide-react';
+import { Leaf } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
 const nasaResources = [
   {
     title: "NASA Official Website",
     description: "Explore the latest news, images, and videos from America's space agency. Get the latest updates on missions, watch NASA TV live, and learn about our quest to reveal the unknown.",
-    link: "https://www.nasa.gov/",
     image: PlaceHolderImages.find(p => p.id === 'nasa-resource-1')!,
   },
   {
@@ -31,13 +30,13 @@ export default function Home() {
       <main className="flex-1 container mx-auto px-4 py-8 md:py-12">
         <header className="text-center mb-12 animate-in fade-in-0 duration-500">
           <div className="flex justify-center items-center gap-4 mb-4">
-            <Rocket className="w-10 h-10 md:w-12 md:h-12 text-primary" />
+            <Leaf className="w-10 h-10 md:w-12 md:h-12 text-primary" />
             <h1 className="text-4xl md:text-5xl font-bold font-headline text-foreground">
-              Space Explorers Hub
+              AgriXplorer
             </h1>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Embark on a cosmic journey! Discover amazing resources from NASA.
+            Explore the future of farming with the power of NASA data.
           </p>
         </header>
 
@@ -53,7 +52,7 @@ export default function Home() {
             >
               <div className="text-center text-white p-8 bg-black/50 rounded-lg">
                 <h3 className="text-2xl font-bold mb-2">Game Coming Soon!</h3>
-                <p className="text-muted-foreground">The Asteroid Field Navigator will be docked here shortly.</p>
+                <p className="text-muted-foreground">The Crop Advisor game will be planted here shortly.</p>
               </div>
             </div>
           </Card>
@@ -70,8 +69,8 @@ export default function Home() {
       </main>
 
       <footer className="py-6 text-center text-muted-foreground text-sm">
-        <p>&copy; {new Date().getFullYear()} Space Explorers Hub. All rights reserved.</p>
-        <p className="opacity-75">Powered by cosmic dust and code.</p>
+        <p>&copy; {new Date().getFullYear()} AgriXplorer. All rights reserved.</p>
+        <p className="opacity-75">Powered by NASA data and agricultural innovation.</p>
       </footer>
     </div>
   );
