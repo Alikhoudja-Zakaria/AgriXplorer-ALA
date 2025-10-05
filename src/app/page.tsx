@@ -1,4 +1,5 @@
 
+
 import { NasaResourceCard } from '@/components/nasa-resource-card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Leaf, MapPin, BarChart3, BookOpen, BrainCircuit } from 'lucide-react';
