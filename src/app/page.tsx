@@ -54,6 +54,15 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-background font-body">
       <main className="flex-1 container mx-auto px-4 py-8 md:py-12">
+        <section id="game-placeholder" className="mb-12">
+          <Card className="w-full h-80 flex items-center justify-center bg-card/50 backdrop-blur-sm animate-in fade-in-0 duration-500">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-primary">Game Coming Soon</h2>
+              <p className="text-lg text-muted-foreground mt-2">Get ready for an exciting agricultural adventure!</p>
+            </div>
+          </Card>
+        </section>
+
         <header className="text-center mb-12 animate-in fade-in-0 duration-500">
           <div className="flex justify-center items-center gap-4 mb-4">
             <Leaf className="w-10 h-10 md:w-12 md:h-12 text-primary" />
